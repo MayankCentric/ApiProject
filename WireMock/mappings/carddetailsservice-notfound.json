@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/user/qatest/card/1234123412340003",
+    "basicAuth": {
+      "username": "user",
+      "password": "pass"
+    }
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status":"404",
+      "errorKey":"404",
+      "description":"Card Not Found"
+    }
+  }
+}

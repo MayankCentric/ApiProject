@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "/user/qatest/card/1234123412341001/lock/c8222dfab33111e896f8529269fb1459",
+    "basicAuth": {
+      "username": "user",
+      "password": "pass"
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.card-lock.locking-reason"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": "200",
+      "errorKey": "N/A",
+      "description": "OK - The card was successfully locked"
+    }
+  }
+}

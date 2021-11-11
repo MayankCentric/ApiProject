@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "/user/qatest/card//lock/c8222dfab33111e896f8529269fb1462",
+    "basicAuth": {
+      "username": "user",
+      "password": "pass"
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.card-lock.locking-reason"
+      }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": "400",
+      "errorKey": "MISSING_PARAMETERS",
+      "description": "Bad Request, missing card PAN"
+    }
+  }
+}

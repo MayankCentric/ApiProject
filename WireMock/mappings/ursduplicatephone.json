@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "/user/",
+    "bodyPatterns": [
+      {
+        "matches": ".*\"mobile-number\":\"\\S+\".*"
+      }
+    ]
+  },
+  "response": {
+    "status": 403,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": "403",
+      "errorKey": "USER_WITH_THIS_PHONE_NUMBER_EXISTS",
+      "description": "User with this mobile phone number already exists"
+    }
+  }
+}

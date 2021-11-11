@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "/USER/",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "[?(@.salutation][?(@.first-name)][?(@.last-name)][?(@.birth-date)][?(@.mobile-number)][?(@.password)]"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+        "register-user-response": {
+        "login-name": "qatest",
+        "status": "ACTIVE",
+        "pan": "1234123412340001"
+      }
+    }
+  }
+}

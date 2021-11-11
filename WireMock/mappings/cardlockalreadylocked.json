@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "/user/qatest/card/1234123412341002/lock/c8222dfab33111e896f8529269fb1460",
+    "basicAuth": {
+      "username": "user",
+      "password": "pass"
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.card-lock.locking-reason"
+      }
+    ]
+  },
+  "response": {
+    "status": 403,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": "403",
+      "errorKey": "CARD_ALREADY_LOCKED",
+      "description": "Card already in locked state"
+    }
+  }
+}

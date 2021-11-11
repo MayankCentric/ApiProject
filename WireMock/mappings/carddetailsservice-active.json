@@ -1,0 +1,23 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/user/qatest/card/1234123412340001",
+    "basicAuth": {
+      "username": "user",
+      "password": "pass"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "card": {
+        "holder-name": "John Smith",
+        "number": "1234123412340001",
+        "status": "ACTIVE"
+      }
+    }
+  }
+}

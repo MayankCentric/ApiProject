@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "/user/qatest/card/1234123412341003/lock/c8222dfab33111e896f8529269fb1461",
+    "basicAuth": {
+      "username": "user",
+      "password": "pass"
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.card-lock.locking-reason"
+      }
+    ]
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": "404",
+      "errorKey": "NO_CARD_FOUND",
+      "description": "No card found for given PAN"
+    }
+  }
+}

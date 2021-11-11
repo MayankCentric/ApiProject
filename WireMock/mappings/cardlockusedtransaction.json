@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "/user/qatest/card/1234123412341005/lock/c8222dfab33111e896f8529269fb1463",
+    "basicAuth": {
+      "username": "user",
+      "password": "pass"
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.card-lock.locking-reason"
+      }
+    ]
+  },
+  "response": {
+    "status": 403,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": "403",
+      "errorKey": "TRANSACTION_ALREADY_USED",
+      "description": "Transaction with same 'c8222dfab33111e896f8529269fb1463' already exists on the server"
+    }
+  }
+}
